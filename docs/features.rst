@@ -270,6 +270,14 @@ and the native Python syntax:
 Both query formats allow for conditional and logical And/Or operators, however
 nested and combined.
 
+
+::
+
+    http://eve-demo.herokuapp.com/people?where={"lastname": "Doe", "firstname": "John"}
+    TODO: Insert OR example in mongo format
+    http://eve-demo.herokuapp.com/people?where=lastname=="Doe" and firstname="John"
+    http://eve-demo.herokuapp.com/people?where=lastname=="Doe" or lastname="Smith"
+
 Filters are enabled by default on all document fields. However, the API
 maintainer can choose to disable them all and/or whitelist allowed ones (see
 ``ALLOWED_FILTERS`` in :ref:`global`). If scraping, or fear of DB DoS attacks
